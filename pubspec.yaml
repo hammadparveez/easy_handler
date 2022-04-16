@@ -1,6 +1,6 @@
 name: easy_handler
 description: Easy Handler helps you to avoid long statement and make code more readable
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/hammadpervez/easy_handler
 
 environment:
