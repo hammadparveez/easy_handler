@@ -1,6 +1,6 @@
 # Easy Handler
 
-## Easy and simple way to write avoid long statement
+## Easy and simple way to avoid long statement to make code readable
 
 ```yaml
 dependencies:
