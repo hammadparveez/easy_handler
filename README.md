@@ -4,7 +4,7 @@
 
 ```yaml
 dependencies:
-  easy_card_scanner: <latest-version>
+  easy_handler: <latest-version>
 ```
 
 ### once you have loaded a package, put that whereever you want to use it.
