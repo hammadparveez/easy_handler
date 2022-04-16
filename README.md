@@ -1,10 +1,10 @@
 # Easy Handler
 
-## Easy and simple way to write avoid long statement
+## Easy and simple way to avoid long statement to make code readable
 
 ```yaml
 dependencies:
-  easy_card_scanner: <latest-version>
+  easy_handler: <latest-version>
 ```
 
 ### once you have loaded a package, put that whereever you want to use it.
