@@ -30,9 +30,17 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       home: Scaffold(
         floatingActionButton: ElevatedButton(
-            onPressed: () {},
-            child: const Text("Tap me"),
-            style: ButtonStyle(backgroundColor: setProp(Colors.purple))),
+          onPressed: () {},
+          child: const Text("Tap me"),
+          style: ButtonStyle(
+            backgroundColor: setProp(Colors.purple),
+            foregroundColor: setProp(Colors.white),
+            elevation: setProp(10),
+            padding: setProp(
+              EdgeInsets.symmetric(horizontal: 10),
+            ),
+          ),
+        ),
         appBar: AppBar(
           title: const Text('Easy Handler'),
         ),

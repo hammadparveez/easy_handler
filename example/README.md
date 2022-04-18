@@ -1,16 +1,58 @@
-# easy_handler_example
+# Example Easy Handler
 
-Demonstrates how to use the easy_handler plugin.
+```dart
+import 'package:flutter/material.dart';
+import 'package:easy_handler/easy_handler.dart';
 
-## Getting Started
+void main() {
+  runApp(const MyApp());
+}
 
-This project is a starting point for a Flutter application.
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-A few resources to get you started if this is your first Flutter project:
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+class _MyAppState extends State<MyApp> {
+  String text = '';
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  @override
+  void initState() {
+    super.initState();
+    afterBuild((() {
+      setState(() {
+        text = "Hammad Parveez";
+      });
+    }));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        floatingActionButton: ElevatedButton(
+          onPressed: () {},
+          child: const Text("Tap me"),
+          style: ButtonStyle(
+            backgroundColor: setProp(Colors.purple),
+            foregroundColor: setProp(Colors.white),
+            elevation: setProp(10),
+            padding: setProp(
+              EdgeInsets.symmetric(horizontal: 10),
+            ),
+          ),
+        ),
+        appBar: AppBar(
+          title: const Text('Easy Handler'),
+        ),
+        body: Center(child: Text("After layout: $text")),
+      ),
+    );
+  }
+}
+
+
+
+```
